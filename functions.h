@@ -10,8 +10,8 @@ int sum_array_iterative(int *arr, int size);
 int fibonacci(int previous, int current, int count, int number);
 int fibonacci_iterative(int n);
 
-void printd(int n);
-void IntToStr(int n);
+char *IntToStr_add(int number, char *str);
+char *IntToStr(int number, char *str);
 
 
 #endif

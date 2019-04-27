@@ -49,21 +49,25 @@ int fibonacci_iterative(int n)
 	return fibonacci(1, 2, 2, n);
 }
 
-void printd(int n)
+char *IntToStr_add(int number, char *str)
 {
-	int i;
-
-	if (n < 0) {
-		putchar('-');
-		n = -n;
+	if (number <= -10) {
+		str = IntToStr_add(number / 10, str);
 	}
 
-	if ((i = n / 10)!= 0) 
-		printd(i);
-	putchar(n % 10 + '0');
+	*str++ = '0' - number % 10;
+	return str;
 }
 
-void IntToStr(int n)
+char *IntToStr(int number, char *str)
 {
-	printd(n);
+	char *temp = str;
+	if (number < 0) {
+		*temp++ = '-';
+	} else {
+		number = -number;
+	}
+
+	IntToStr_add(number, temp);
+	return str;
 }

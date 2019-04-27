@@ -7,7 +7,7 @@ main.o: main.c
 	gcc -c -Wall -Werror -g main.c -o main.o
 
 functions.o: functions.c
-	gcc -c -Wall -Werror -g functions.c -o functions.o
+	gcc -c -Wall -Werror -g functions.c -o -functions.o 
 
 clean: 
 	rm -rf *.o

@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define count 20
 
 int main()
 {
@@ -39,11 +40,12 @@ int main()
 	printf("iterative result: %d\n", result);
 
 	int number;
+	char str[count] = {'\0'};
 
 	printf("Input number for convert to string: ");
 	scanf("%d", &number);
-	IntToStr(number);
-	printf("\n");
+	IntToStr(number, str);
+	printf("%s\n", str);
 
 	return 0;
 }
